@@ -11,7 +11,7 @@
 				width: 100%;
 			}
 			
-			img {
+			.background {
 				opacity: 0.3;
 			}
 			
@@ -36,24 +36,8 @@
 	<body>
 		<nav class="light-blue lighten-1" >
 			<div class="nav-wrapper container">
-				<a id="logo-container" href="/" class="brand-logo">moustacheminer</a>
+				<div class="brand-logo">moustacheminer</div>
 				<a href="#" data-activates="side-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Garry's Mod<i class="material-icons right">arrow_drop_down</i></a></li>
-					<ul id='dropdown1' class='dropdown-content'>
-						<li><a href="http://moustacheminer.com/srcban">SrcBans</a></li>
-						<li><a href="https://github.com/moustacheminer/mss-garrysmod">MSS-GarrysMod</a></li>
-						<li><a href="http://moustacheminer.com/gm/tool/taunts">MSS Taunts Database</a></li>
-						<li><a href="http://moustacheminer.com/gm/tool/taunts?hof=1">Unofficial HOF Taunts</a></li>
-					</ul>
-					<li><a class="dropdown-button" href="#!" data-activates="dropdown2">MSS-Discord<i class="material-icons right">arrow_drop_down</i></a></li>
-					<ul id='dropdown2' class='dropdown-content'>
-						<li><a href="https://github.com/moustacheminer/mss-discord">GitHub</a></li>
-						<li><a href="http://moustacheminer.com/w/mss-discord">Documentation</a></li>
-						<li><a href="https://discordapp.com/oauth2/authorize?&client_id=257547382277931009&scope=bot&permissions=70765632">Invite Link</a></li>
-						<li><a href="https://discord.gg/hPw5gEt">Community</a></li>
-					</ul>
-				</ul>
 				<ul class="side-nav" id="side-nav">
 					<li><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU GPL v3</a></li>
 					<li><a href="/w/">Documentation</a></li>
@@ -64,7 +48,6 @@
 								<div class="collapsible-body">
 									<ul>
 										<li><a href="http://moustacheminer.com/srcban">SrcBans</a></li>
-										<li><a href="https://github.com/moustacheminer/mss-garrysmod">MSS-GarrysMod</a></li>
 										<li><a href="http://moustacheminer.com/gm/tool/taunts">MSS Taunts Database</a></li>
 										<li><a href="http://moustacheminer.com/gm/tool/taunts?hof=1">Unofficial HOF Taunts</a></li>
 									</ul>
@@ -78,10 +61,9 @@
 								<a class="collapsible-header">MSS-Discord<i class="material-icons">arrow_drop_down</i></a>
 								<div class="collapsible-body">
 									<ul>
-										<li><a href="https://github.com/moustacheminer/mss-discord">GitHub</a></li>
 										<li><a href="http://moustacheminer.com/w/mss-discord">Documentation</a></li>
-										<li><a href="https://discordapp.com/oauth2/authorize?&client_id=257547382277931009&scope=bot&permissions=70765632">Invite Link</a></li>
-										<li><a href="https://discord.gg/hPw5gEt">Community</a></li>
+										<li><a href="https://discordapp.com/oauth2/authorize?&client_id=257547382277931009&scope=bot&permissions=70765632">Invite Bot</a></li>
+										<li><a href="https://discord.gg/hPw5gEt">MSS Chat</a></li>
 									</ul>
 								</div>
 							</li>
@@ -89,8 +71,20 @@
 					</li>
 				</ul>
 			</div>
+			<div class="nav-wrapper container">
+				<ul class="side-nav" id="github">
+					<li><a href="https://github.com/moustacheminer" class="subheader">moustacheminer @ GitHub</a></li>
+					<li><a href="https://github.com/moustacheminer/moustacheminer.github.io">moustacheminer.github.io</a></li>
+					<li><a href="https://github.com/moustacheminer/mss-discord">MSS-Discord</a></li>
+					<li><a href="https://github.com/moustacheminer/mss-garrysmod">MSS-GarrysMod</a></li>
+					<li><div class="divider"></div></li>
+					<li><a href="https://github.com/lepon01" class="subheader">7coil @ GitHub</a></li>
+					<li><a href="https://github.com/lepon01/pbblbkmchat">Pebble Watch Chat</a></li>
+				</ul>
+			</div>
 		</nav>
 		<main>
+			<a href="#" data-activates="github" class="github"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 			<div id="index-banner" class="parallax-container">
 				<div class="section no-pad-bot">
 					<div class="container">
@@ -102,13 +96,14 @@
 						</div>
 						<div class="row center">
 							<a href="#" data-activates="side-nav" class="btn-large waves-effect waves-light teal">Get Started</a>
+							<a href="#" data-activates="github" class="btn-large waves-effect waves-light teal">GitHub</a>
 						</div>
 						<div class="row center">
 							<h6 class="header col s12 light white-text">Background image of a either Hong Kong or South Korea. Images by lioc7, with permission</h6>
 						</div>
 					</div>
 				</div>
-				<div class="parallax"><img src="background.jpg" alt="Background image of a either Hong Kong or Worst Korea. Images by lioc7, with permission"></div>
+				<div class="parallax"><img src="background.jpg" class="background" alt="Background image of a either Hong Kong or Worst Korea. Images by lioc7, with permission"></div>
 			</div>
 		</main>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -130,6 +125,7 @@
 		</footer>
 		<script>
 			$(".btn-large").sideNav();
+			$(".github").sideNav();
 			
 			$('.collapsible').collapsible({
 				accordion : true
