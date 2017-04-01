@@ -81,10 +81,23 @@
 				<div class="row">
 					<div class="input-field col s4">
 						<select>
-						  <option value="" disabled selected>Select a Colour</option>
-						  <option value="1">Option 1</option>
-						  <option value="2">Option 2</option>
-						  <option value="3">Option 3</option>
+							<option value="" disabled selected>Select a Colour</option>
+							<option value="0">White</option>
+							<option value="1">Light Grey</option>
+							<option value="2">Grey</option>
+							<option value="3">Black</option>
+							<option value="4">Pink</option>
+							<option value="5">Red</option>
+							<option value="6">Orange</option>
+							<option value="7">Brown</option>
+							<option value="8">Yellow</option>
+							<option value="9">Lime</option>
+							<option value="10">Green</option>
+							<option value="11">Cyan</option>
+							<option value="12">Blue</option>
+							<option value="13">Dark Blue</option>
+							<option value="14">Magenta</option>
+							<option value="15">Purple</option>
 						</select>
 						<label>Colour</label>
 					</div>
