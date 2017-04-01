@@ -23,7 +23,7 @@
 
 			body {
 				overflow: hidden;
-				background-color: #000000;
+				background-color: #FFFFFF;
 			}
 
 			footer {
