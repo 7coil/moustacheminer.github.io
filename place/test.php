@@ -22,13 +22,10 @@
 			}
 
 			body {
-				overflow: hidden;
 				background-color: #FFFFFF;
 			}
 
 			footer {
-				position: fixed;
-				bottom: 0;
 				width: 100%
 			}
 		</style>
