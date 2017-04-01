@@ -132,7 +132,30 @@
 					$y = mysqli_real_escape_string($conn, $_GET['y']);
 					$colour = mysqli_real_escape_string($conn, $_GET['colour']);
 
-					$sql = "SELECT * FROM place WHERE username='" . $username . "' AND x='" . $x . "' AND y='" . $y . "' AND colour='" . $colour . "';";
+					$wheres = array();
+
+					if($username) {
+						$wheres[] = 'username = ' . $username;
+					}
+
+					if($x) {
+						$wheres[] = 'x = ' . $x;
+					}
+
+					if($y) {
+						$wheres[] = 'y = ' . $y;
+					}
+
+					if($colour) {
+						$wheres[] = 'colour = ' . $colour;
+					}
+
+					$where_string = implode(' AND ', $wheres);
+
+					$sql = "SELECT * FROM place";
+					if ($where_string) {
+						$sql .= " WHERE " . $where_string;
+					}
 
 					$result = $conn->query($sql) or die($conn->error);
 
