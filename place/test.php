@@ -16,7 +16,7 @@
 			}
 
 			h1 {
-				font-size: 8vw;
+				font-size: 6vw;
 				margin-left: auto;
 				margin-right: auto;
 			}
@@ -70,7 +70,7 @@
 		<main>
 		<div class="container">
 			<br><br>
-			<h1 class="header center orange-text">Reddit Place User Search</h1>
+			<h1 class="center teal-text text-lighten-2">Reddit Place User Search</h1>
 		<form method="get">
 			Username: <input type="text" name="username">
 		</form>
