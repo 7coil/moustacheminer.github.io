@@ -138,7 +138,7 @@
 					$wheres = array();
 
 					if($username) {
-						$wheres[] = 'username = ' . $username;
+						$wheres[] = 'username = "' . $username . '"';
 					}
 
 					if($x) {
