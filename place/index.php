@@ -8,7 +8,6 @@
 		<h1>Reddit Place User Search</h1>
 		<p>See what colours people have submitted (since Fri Mar 31 2017 20:26:06 GMT+0100)</p>
 		<a href="https://github.com/moustacheminer/place">GitHub code, csv and Microsoft Excel Document</a>
-		<a href="/place/contributions.php">*beta* See the biggest contributors</a>
 		<p>Send GET requests to http://moustacheminer.com/place/searchapi?username=(username here)</p>
 		<form method="get">
 			Username: <input type="text" name="username">
