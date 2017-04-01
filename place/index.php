@@ -72,7 +72,27 @@
 			<br><br>
 			<h1 class="center teal-text text-lighten-2">Reddit Place User Search</h1>
 		<form method="get">
-			Username: <input type="text" name="username">
+			<div class="input-field col s12">
+				<input type="text" name="username" id="username">
+				<label for="username">Reddit Username</label>
+			</div>
+			<div class="input-field col s4">
+				<select>
+				  <option value="" disabled selected>Select a Colour</option>
+				  <option value="1">Option 1</option>
+				  <option value="2">Option 2</option>
+				  <option value="3">Option 3</option>
+				</select>
+				<label>Colour</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="number" name="x" id="x" class="validate">
+				<label for="x" data-error="The value is not between XXX and YYY.">X Coordinate</label>
+			</div>
+			<div class="input-field col s4">
+				<input type="number" name="y" id="y" class="validate">
+				<label for="y" data-error="The value is not between XXX and YYY.">Y Coordinate</label>
+			</div>
 		</form>
 		<?php
 			if(isset($_GET['username'])) {
