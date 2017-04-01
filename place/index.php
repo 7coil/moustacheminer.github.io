@@ -128,9 +128,9 @@
 					echo "Connected to mySQL<br>";
 
 					$username = mysqli_real_escape_string($conn, $_GET['username']);
-					$x = mysqli_real_escape_string($conn, $_GET['username']);
-					$y = mysqli_real_escape_string($conn, $_GET['username']);
-					$colour = mysqli_real_escape_string($conn, $_GET['username']);
+					$x = mysqli_real_escape_string($conn, $_GET['x']);
+					$y = mysqli_real_escape_string($conn, $_GET['y']);
+					$colour = mysqli_real_escape_string($conn, $_GET['colour']);
 
 					$sql = "SELECT * FROM place WHERE username='" . $username . "' AND x='" . $x . "' AND y='" . $y . "' AND colour='" . $colour . "';";
 
