@@ -115,7 +115,7 @@
 					</button>
 			</form>
 			<?php
-				if(isset($_GET['username'])) {
+				if(isset($_GET['username']) || isset($_GET['x']) || isset($_GET['y']) || isset($_GET['colour']) ) {
 					echo "Searching...<br>";
 					$servername = "127.0.0.1";
 					$serveruser = "reddit";
