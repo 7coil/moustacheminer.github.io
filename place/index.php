@@ -48,6 +48,9 @@
 
 				while($row = $result->fetch_assoc()){
 					switch($row['colour']) {
+						case 0:
+							$colour = "White";
+							break;
 						case 1:
 							$colour = "Light Grey";
 							break;
