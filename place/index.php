@@ -121,16 +121,19 @@
 
 					$conn = new mysqli($servername, $serveruser, $serverpass, $db);
 
-					$input = mysqli_real_escape_string($conn, $_GET['username']);
-
 					if($conn->connect_errno > 0){
 						echo("Error!<br>");
 						die('Unable to connect to database [' . $conn->connect_error . ']');
 					}
-
 					echo "Connected to mySQL<br>";
 
-					$sql = "SELECT * FROM place WHERE username LIKE '" . $input . "';";
+					$username = mysqli_real_escape_string($conn, $_GET['username']);
+					$x = mysqli_real_escape_string($conn, $_GET['username']);
+					$y = mysqli_real_escape_string($conn, $_GET['username']);
+					$colour = mysqli_real_escape_string($conn, $_GET['username']);
+
+					$sql = "SELECT * FROM place WHERE username='" . $username . "' AND x='" . $x . "' AND y='" . $y . "' AND colour='" . $colour . "';";
+
 					$result = $conn->query($sql) or die($conn->error);
 
 					echo "<table border='1px'>";
