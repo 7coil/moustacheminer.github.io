@@ -24,7 +24,7 @@
 
 			echo "Connected to mySQL<br>";
 
-			$sql = "SELECT username,COUNT(*) as count FROM place GROUP BY username ORDER BY count DESC LIMIT 100;";
+			$sql = "SELECT username,COUNT(username) as count FROM place GROUP BY username HAVING count >= 51 ORDER BY count DESC ;";
 			$result = $conn->query($sql) or die($conn->error);
 
 			echo "<table border='1px'>";
