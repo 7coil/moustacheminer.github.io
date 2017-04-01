@@ -71,134 +71,138 @@
 		<div class="container">
 			<br><br>
 			<h1 class="center teal-text text-lighten-2">Reddit Place User Search</h1>
-		<form method="get">
-			<div class="input-field col s12">
-				<input type="text" name="username" id="username">
-				<label for="username">Reddit Username</label>
-			</div>
-			<div class="input-field col s4">
-				<select>
-				  <option value="" disabled selected>Select a Colour</option>
-				  <option value="1">Option 1</option>
-				  <option value="2">Option 2</option>
-				  <option value="3">Option 3</option>
-				</select>
-				<label>Colour</label>
-			</div>
-			<div class="input-field col s4">
-				<input type="number" name="x" id="x" class="validate">
-				<label for="x" data-error="The value is not between XXX and YYY.">X Coordinate</label>
-			</div>
-			<div class="input-field col s4">
-				<input type="number" name="y" id="y" class="validate">
-				<label for="y" data-error="The value is not between XXX and YYY.">Y Coordinate</label>
-			</div>
-		</form>
-		<?php
-			if(isset($_GET['username'])) {
-				echo "Searching...<br>";
-				$servername = "127.0.0.1";
-				$serveruser = "reddit";
-				$serverpass = "redditsips";
-				$db = "reddit";
+			<form method="get">
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" name="username" id="username">
+						<label for="username">Reddit Username</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s4">
+						<select>
+						  <option value="" disabled selected>Select a Colour</option>
+						  <option value="1">Option 1</option>
+						  <option value="2">Option 2</option>
+						  <option value="3">Option 3</option>
+						</select>
+						<label>Colour</label>
+					</div>
+					<div class="input-field col s4">
+						<input type="number" name="x" id="x" class="validate">
+						<label for="x" data-error="The value is not between XXX and YYY.">X Coordinate</label>
+					</div>
+					<div class="input-field col s4">
+						<input type="number" name="y" id="y" class="validate">
+						<label for="y" data-error="The value is not between XXX and YYY.">Y Coordinate</label>
+					</div>
+				</div>
+			</form>
+			<?php
+				if(isset($_GET['username'])) {
+					echo "Searching...<br>";
+					$servername = "127.0.0.1";
+					$serveruser = "reddit";
+					$serverpass = "redditsips";
+					$db = "reddit";
 
-				$conn = new mysqli($servername, $serveruser, $serverpass, $db);
+					$conn = new mysqli($servername, $serveruser, $serverpass, $db);
 
-				$input = mysqli_real_escape_string($conn, $_GET['username']);
+					$input = mysqli_real_escape_string($conn, $_GET['username']);
 
-				if($conn->connect_errno > 0){
-					echo("Error!<br>");
-					die('Unable to connect to database [' . $conn->connect_error . ']');
-				}
-
-				echo "Connected to mySQL<br>";
-
-				$sql = "SELECT * FROM place WHERE username LIKE '" . $input . "';";
-				$result = $conn->query($sql) or die($conn->error);
-
-				echo "<table border='1px'>";
-				echo "<tr>";
-				echo "<th>ID</th>";
-				echo "<th>X</th>";
-				echo "<th>Y</th>";
-				echo "<th>Username</th>";
-				echo "<th>Colour</th>";
-				echo "<th>Time (ms)</th>";
-				echo "<th>Date</th>";
-				echo "</tr>";
-
-				while($row = $result->fetch_assoc()){
-					switch($row['colour']) {
-						case 0:
-							$colour = "White";
-							break;
-						case 1:
-							$colour = "Light Grey";
-							break;
-						case 2:
-							$colour = "Grey";
-							break;
-						case 3:
-							$colour = "Black";
-							break;
-						case 4:
-							$colour = "Pink";
-							break;
-						case 5:
-							$colour = "Red";
-							break;
-						case 6:
-							$colour = "Orange";
-							break;
-						case 7:
-							$colour = "Brown";
-							break;
-						case 8:
-							$colour = "Yellow";
-							break;
-						case 9:
-							$colour = "Lime";
-							break;
-						case 10:
-							$colour = "Green";
-							break;
-						case 11:
-							$colour = "Cyan";
-							break;
-						case 12:
-							$colour = "Blue";
-							break;
-						case 13:
-							$colour = "Dark Blue";
-							break;
-						case 14:
-							$colour = "Magenta";
-							break;
-						case 15:
-							$colour = "Purple";
-							break;
-						default:
-							$colour = "Invalid ID";
-							break;
+					if($conn->connect_errno > 0){
+						echo("Error!<br>");
+						die('Unable to connect to database [' . $conn->connect_error . ']');
 					}
 
+					echo "Connected to mySQL<br>";
 
+					$sql = "SELECT * FROM place WHERE username LIKE '" . $input . "';";
+					$result = $conn->query($sql) or die($conn->error);
+
+					echo "<table border='1px'>";
 					echo "<tr>";
-					echo "<td>" . $row['ID'] . '</td>';
-					echo "<td>" . $row['x'] . '</td>';
-					echo "<td>" . $row['y'] . '</td>';
-					echo "<td>" . $row['username'] . '</td>';
-					echo "<td>" . $colour . '</td>';
-					echo "<td>" . $row['time'] . '</td>';
-					echo "<td>" . date("c", $row['time']/1000) . '</td>';
+					echo "<th>ID</th>";
+					echo "<th>X</th>";
+					echo "<th>Y</th>";
+					echo "<th>Username</th>";
+					echo "<th>Colour</th>";
+					echo "<th>Time (ms)</th>";
+					echo "<th>Date</th>";
 					echo "</tr>";
+
+					while($row = $result->fetch_assoc()){
+						switch($row['colour']) {
+							case 0:
+								$colour = "White";
+								break;
+							case 1:
+								$colour = "Light Grey";
+								break;
+							case 2:
+								$colour = "Grey";
+								break;
+							case 3:
+								$colour = "Black";
+								break;
+							case 4:
+								$colour = "Pink";
+								break;
+							case 5:
+								$colour = "Red";
+								break;
+							case 6:
+								$colour = "Orange";
+								break;
+							case 7:
+								$colour = "Brown";
+								break;
+							case 8:
+								$colour = "Yellow";
+								break;
+							case 9:
+								$colour = "Lime";
+								break;
+							case 10:
+								$colour = "Green";
+								break;
+							case 11:
+								$colour = "Cyan";
+								break;
+							case 12:
+								$colour = "Blue";
+								break;
+							case 13:
+								$colour = "Dark Blue";
+								break;
+							case 14:
+								$colour = "Magenta";
+								break;
+							case 15:
+								$colour = "Purple";
+								break;
+							default:
+								$colour = "Invalid ID";
+								break;
+						}
+
+
+						echo "<tr>";
+						echo "<td>" . $row['ID'] . '</td>';
+						echo "<td>" . $row['x'] . '</td>';
+						echo "<td>" . $row['y'] . '</td>';
+						echo "<td>" . $row['username'] . '</td>';
+						echo "<td>" . $colour . '</td>';
+						echo "<td>" . $row['time'] . '</td>';
+						echo "<td>" . date("c", $row['time']/1000) . '</td>';
+						echo "</tr>";
+					}
+
+					echo "</table>";
+
+					$conn->close();
 				}
-
-				echo "</table>";
-
-				$conn->close();
-			}
-		?>
+			?>
 			<br><br>
 		</div>
 		</main>
