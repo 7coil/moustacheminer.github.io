@@ -3,6 +3,7 @@
 		<title>Reddit Place</title>
 		<link rel="stylesheet" href="place.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A web interface that allows you to recall your or other's past placed pixels.">
 	</head>
 	<body>
 		<h1>Reddit Place User Search</h1>
