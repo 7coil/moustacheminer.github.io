@@ -110,6 +110,9 @@
 						<label for="y" data-error="The value is not between XXX and YYY.">Y Coordinate</label>
 					</div>
 				</div>
+					<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+						<i class="material-icons right">send</i>
+					</button>
 			</form>
 			<?php
 				if(isset($_GET['username'])) {
