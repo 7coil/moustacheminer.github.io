@@ -80,7 +80,7 @@
 				</div>
 				<div class="row">
 					<div class="input-field col s4">
-						<select>
+						<select name="colour">
 							<option value="" disabled selected>Select a Colour</option>
 							<option value="0">White</option>
 							<option value="1">Light Grey</option>
