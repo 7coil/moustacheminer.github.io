@@ -141,15 +141,15 @@
 						$wheres[] = 'username = "' . $username . '"';
 					}
 
-					if($x) {
+					if($x || $x === 0) {
 						$wheres[] = 'x = ' . $x;
 					}
 
-					if($y) {
+					if($y || $y === 0) {
 						$wheres[] = 'y = ' . $y;
 					}
 
-					if($colour) {
+					if($colour || $colour === 0) {
 						$wheres[] = 'colour = ' . $colour;
 					}
 
