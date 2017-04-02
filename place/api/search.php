@@ -1,4 +1,5 @@
 <?php
+	ini_set('memory_limit', '256M');
 	$servername = "127.0.0.1";
 	$serveruser = "reddit";
 	$serverpass = "redditsips";
