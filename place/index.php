@@ -50,8 +50,21 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="/place/">/r/place User Logs</a></li>
-					<li><a href="/place/export.csv">/r/place Exports (CSV)</a></li>
+					<li class="no-padding">
+						<ul class="collapsible collapsible-accordion">
+							<li>
+								<a class="collapsible-header">Reddit<i class="material-icons">arrow_drop_down</i></a>
+								<div class="collapsible-body">
+									<ul>
+										<li><a href="/place/">/r/place User Logs</a></li>
+										<li><a href="/place/export.csv">/r/place Exports (CSV)</a></li>
+										<li><a href="http://reddit.moustacheminer.com">April Fools Forever</a></li>
+										<li><a onclick="chrome.webstore.install('https://chrome.google.com/webstore/detail/hcjalmlcbgeieaddjghjbkdiegpigbnk')">RES for Google Chrome</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div class="nav-wrapper container">
