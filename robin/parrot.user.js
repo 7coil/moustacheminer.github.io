@@ -5,7 +5,7 @@
 // @description  Recreate Slack on top of an 8 day Reddit project.
 // @author       dashed, voltaek, daegalus, vvvv, orangeredstilton, lost_penguin, AviN456, Annon201, LTAcosta, mofosyne
 // @include      http*://reddit.moustacheminer.com/robin*
-// @updateURL    https://moustacheminer.com/robin/parrot.js
+// @updateURL    https://moustacheminer.com/robin/parrot.user.js
 // @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @require      https://raw.githubusercontent.com/ricmoo/aes-js/master/index.js
 // @grant   GM_getValue
