@@ -4,7 +4,8 @@ var updates = {
 	"reddit-plugin-thebutton-git": "https://api.github.com/repos/lepon01/reddit-plugin-thebutton/commits",
 	"reddit-plugin-robin-git": "https://api.github.com/repos/lepon01/reddit-plugin-robin/commits",
 	"discordlink-git": "https://api.github.com/repos/lepon01/discordlink/commits",
-	"discordlinkpebble-git": "https://api.github.com/repos/lepon01/discordlinkpebble/commits"
+	"discordlinkpebble-git": "https://api.github.com/repos/lepon01/discordlinkpebble/commits",
+	"reddit-plugin-place-opensource-git": "https://api.github.com/repos/lepon01/reddit-plugin-place-opensource/commits"
 };
 
 $.each(updates, function(index, element) {
