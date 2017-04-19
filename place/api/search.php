@@ -12,7 +12,7 @@
 			die('{"error": "There was an mySQL connection error"}');
 		}
 
-		$username = mysqli_real_escape_string($conn, $_GET['username']);
+		$username = sha1(mysqli_real_escape_string($conn, $_GET['username']));
 		$x = mysqli_real_escape_string($conn, $_GET['x']);
 		$y = mysqli_real_escape_string($conn, $_GET['y']);
 		$colour = mysqli_real_escape_string($conn, $_GET['colour']);
@@ -20,18 +20,18 @@
 		$wheres = array();
 
 		if($username) {
-			$wheres[] = 'username = "' . $username . '"';
+			$wheres[] = 'user_hash = "' . $username . '"';
 		}
 
-		if($x || %x === "0") {
-			$wheres[] = 'x = ' . $x;
+		if($x || $x === 0) {
+			$wheres[] = 'x_coordinate = ' . $x;
 		}
 
-		if($y || $y === "0") {
-			$wheres[] = 'y = ' . $y;
+		if($y || $y === 0) {
+			$wheres[] = 'y_coordinate = ' . $y;
 		}
 
-		if($colour || $colour === "0") {
+		if($colour || $colour === 0) {
 			$wheres[] = 'colour = ' . $colour;
 		}
 

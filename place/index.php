@@ -143,7 +143,7 @@
 					}
 					echo "Connected to mySQL<br>";
 
-					$username = mysqli_real_escape_string($conn, $_GET['username']);
+					$username = sha1(mysqli_real_escape_string($conn, $_GET['username']));
 					$x = mysqli_real_escape_string($conn, $_GET['x']);
 					$y = mysqli_real_escape_string($conn, $_GET['y']);
 					$colour = mysqli_real_escape_string($conn, $_GET['colour']);
@@ -151,15 +151,15 @@
 					$wheres = array();
 
 					if($username) {
-						$wheres[] = 'username = "' . $username . '"';
+						$wheres[] = 'user_hash = "' . $username . '"';
 					}
 
 					if($x || $x === 0) {
-						$wheres[] = 'x = ' . $x;
+						$wheres[] = 'x_coordinate = ' . $x;
 					}
 
 					if($y || $y === 0) {
-						$wheres[] = 'y = ' . $y;
+						$wheres[] = 'y_coordinate = ' . $y;
 					}
 
 					if($colour || $colour === 0) {
@@ -168,7 +168,7 @@
 
 					$where_string = implode(' AND ', $wheres);
 
-					$sql = "SELECT * FROM place";
+					$sql = "SELECT * FROM tile_placements";
 					if ($where_string) {
 						$sql .= " WHERE " . $where_string;
 					}

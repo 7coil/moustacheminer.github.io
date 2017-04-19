@@ -8,13 +8,13 @@
 
 		$conn = new mysqli($servername, $serveruser, $serverpass, $db);
 
-		$input = mysqli_real_escape_string($conn, $_GET['username']);
+		$input = sha1(mysqli_real_escape_string($conn, $_GET['username']));
 
 		if($conn->connect_errno > 0){
 			die('{"error": "There was an mySQL connection error"}');
 		}
 
-		$sql = "SELECT * FROM place WHERE username LIKE '" . $input . "';";
+		$sql = "SELECT * FROM tile_placements WHERE user_hash LIKE '" . $input . "';";
 		
 		$result = $conn->query($sql) or die('{"error": "The mySQL query returned an error."}');
 		
