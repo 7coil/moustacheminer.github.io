@@ -246,7 +246,7 @@
 
 						echo "<tr>";
 						echo "<td>" . $row['ID'] . '</td>';
-						echo "<td>" . $row['x_cooordinate'] . '</td>';
+						echo "<td>" . $row['x_coordinate'] . '</td>';
 						echo "<td>" . $row['y_coordinate'] . '</td>';
 						echo "<td>" . $row['user_hash'] . '</td>';
 						echo "<td>" . $colour . '</td>';
