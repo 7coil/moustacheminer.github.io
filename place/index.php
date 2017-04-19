@@ -175,6 +175,8 @@
 
 					$result = $conn->query($sql) or die($conn->error);
 
+					echo "<p>Ran query $sql</p>"
+
 					echo "<table border='1px'>";
 					echo "<tr>";
 					echo "<th>ID</th>";
