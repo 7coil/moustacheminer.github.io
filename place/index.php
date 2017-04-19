@@ -182,7 +182,7 @@
 					echo "<th>ID</th>";
 					echo "<th>X</th>";
 					echo "<th>Y</th>";
-					echo "<th>Username</th>";
+					echo "<th>Username Hash</th>";
 					echo "<th>Colour</th>";
 					echo "<th>Time (ms)</th>";
 					echo "<th>Date</th>";
@@ -246,12 +246,12 @@
 
 						echo "<tr>";
 						echo "<td>" . $row['ID'] . '</td>';
-						echo "<td>" . $row['x'] . '</td>';
-						echo "<td>" . $row['y'] . '</td>';
-						echo "<td>" . $row['username'] . '</td>';
+						echo "<td>" . $row['x_cooordinate'] . '</td>';
+						echo "<td>" . $row['y_coordinate'] . '</td>';
+						echo "<td>" . $row['user_hash'] . '</td>';
 						echo "<td>" . $colour . '</td>';
-						echo "<td>" . $row['time'] . '</td>';
-						echo "<td>" . date("c", $row['time']/1000) . '</td>';
+						echo "<td>" . $row['ts'] . '</td>';
+						echo "<td>" . date("c", $row['ts']/1000) . '</td>';
 						echo "</tr>";
 					}
 
