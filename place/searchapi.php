@@ -8,7 +8,7 @@
 
 		$conn = new mysqli($servername, $serveruser, $serverpass, $db);
 
-		$input = sha1(mysqli_real_escape_string($conn, $_GET['username']));
+		$input = base64_encode(sha1(mysqli_real_escape_string($conn, $_GET['username'])));
 
 		if($conn->connect_errno > 0){
 			die('{"error": "There was an mySQL connection error"}');

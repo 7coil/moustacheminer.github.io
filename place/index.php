@@ -143,7 +143,7 @@
 					}
 					echo "Connected to mySQL<br>";
 
-					$username = sha1(mysqli_real_escape_string($conn, $_GET['username']));
+					$username = base64_encode(sha1(mysqli_real_escape_string($conn, $_GET['username'])));
 					$x = mysqli_real_escape_string($conn, $_GET['x']);
 					$y = mysqli_real_escape_string($conn, $_GET['y']);
 					$colour = mysqli_real_escape_string($conn, $_GET['colour']);
