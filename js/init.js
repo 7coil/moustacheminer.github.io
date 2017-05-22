@@ -1,5 +1,6 @@
 (function($){
-  $(function(){
-    $('.parallax').parallax();
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+	$(function(){
+		$('.parallax').parallax();
+		$('.collapsible').collapsible();
+	});
+})(jQuery);
