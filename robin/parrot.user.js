@@ -13,6 +13,7 @@
 // @grant   GM_addStyle
 // @grant   GM_xmlhttpRequest
 // ==/UserScript==
+
 (function() {
     // hacky solutions
     var CURRENT_CHANNEL = "";
