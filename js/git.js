@@ -34,10 +34,23 @@ function durationMS(ms) {
 	h = h % 24;
 
 	var message = "";
-	if(d > 0) message += d + " days ";
-	if(h > 0) message += h + " hours ";
-	if(m > 0) message += m + " minutes ";
-	if(s > 0) message += s + " seconds ";
+	if(d === 1) {
+		message += d + " days "
+	} else if (d > 1) {
+		message += d + " day "
+	};
+
+	if(m === 1) {
+		message += d + " minute "
+	} else if (d > 1) {
+		message += d + " minutes "
+	};
+
+	if(s === 1) {
+		message += d + " second "
+	} else if (d > 1) {
+		message += d + " seconds "
+	};
 
 	return message;
 }
