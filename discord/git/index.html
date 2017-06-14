@@ -38,14 +38,25 @@
 				font-size: 20px;
 			}
 
+			.cover {
+				position: fixed;
+				padding: 0px;
+				margin: 0px;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+			}
+
 			@keyframes marquee-h {
 				0% { transform: translate(100%, 0); }
 				100% { transform: translate(-100%, 0); }
 			}
 
 			@keyframes marquee-v {
-				0% { transform: translate(0, -100%); }
-				100% { transform: translate(0, 100%); }
+				0% { transform: translate(0, -200%); }
+				100% { transform: translate(0, 200%); }
 			}
 
 			@keyframes spin {
@@ -54,15 +65,44 @@
 			}
 
 			@keyframes colour {
-				0% { filter: hue-rotate(0deg) }
-				25% { filter: hue-rotate(90deg) }
-				50% { filter: hue-rotate(180deg) }
+				0% { filter: hue-rotate(0deg); }
+				25% { filter: hue-rotate(90deg); }
+				50% { filter: hue-rotate(180deg); }
 				75% { filter: hue-rotate(270deg); }
 				100% { filter: hue-rotate(360deg); }
+			}
+
+			@keyframes bounce-x {
+				0% { left: 0%; }
+				100% { left: calc(100% - 160px); }
+			}
+
+			@keyframes bounce-y {
+				0% { top: 0%; }
+				100% { top: calc(100% - 90px); }
 			}
 		</style>
 	</head>
 	<body>
+		<a id="play" href="#">Destroy Ears</a>
+		<div class="cover">
+			<iframe class="video" style="animation: bounce-x 6.312151325s linear infinite alternate, bounce-y 5.32978231876s linear infinite alternate; position: relative; display: block; height: 90px; width: 160px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+		</div>
+		<div class="cover">
+			<iframe class="video" style="animation: bounce-x 4.312151325s linear infinite alternate, bounce-y 3.32978231876s linear infinite alternate; position: relative; display: block; height: 90px; width: 160px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+		</div>
+		<div class="cover">
+			<iframe class="video" style="animation: bounce-x 1s linear infinite alternate, bounce-y 10s linear infinite alternate; position: relative; display: block; height: 90px; width: 160px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+		</div>
+		<div class="cover">
+			<iframe class="video" style="animation: bounce-x 4s linear infinite alternate, bounce-y 31.13s linear infinite alternate; position: relative; display: block; height: 90px; width: 160px;" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+		</div>
+		<div class="cover">
+			<img style="animation: bounce-x 10s linear infinite alternate, bounce-y 5.23178923s linear infinite alternate; position: relative; display: block; height: 90px; width: 160px;" src="http://i.imgur.com/6AtJWkA.png">
+		</div>
+		<div class="cover">
+			<img style="animation: bounce-x 35s linear infinite alternate, bounce-y 32.78923s linear infinite alternate; position: relative; display: block; height: 90px; width: 160px;" src="https://pbs.twimg.com/media/C37vcKCVMAAqDvC.png">
+		</div>
 		<div style="animation: marquee-h 10s linear infinite;">
 			<div style="animation: marquee-v 5s linear infinite;">
 				<img style="animation: spin 40s linear infinite, colour 1s linear infinite;" height="300" width="300" src="gud1.png">
@@ -96,7 +136,7 @@
 		<h3>Review of Mario Sunshine</h3>
 		<p>I crashed and i got very very scared. It blue up the plane like what heppened 5 months ago, and now lugi i mean mario is now forced to clean up the island. at least it wasnt as bad as what happened with the twin towers, that was very very bad and many goodies died because of the al kie Eda</p>
 		<img style="animation: spin 300s linear infinite;" height="300" width="320" src="http://dereksmoore.com//assets/work/hamster-dance/hamsterdance3.gif">
-		<iframe width="300" height="200" src="https://www.youtube.com/embed/RDfjXj5EGqI" frameborder="0" allowfullscreen></iframe>
+		<iframe class="video" width="300" height="200" src="https://www.youtube.com/embed/RDfjXj5EGqI" frameborder="0" allowfullscreen></iframe>
 		<img style="animation: spin 56s linear infinite reverse;" height="300" width="320" src="http://dereksmoore.com//assets/work/hamster-dance/hamsterdance3.gif">
 		<hr>
 		<h2>Div Racing!</h2>
@@ -116,5 +156,7 @@
 		<div style="background-color: #FFFFFF;">
 			<p>On a serious note, this website is technically compliant with HTML5 standards. Visit us on <a href="https://github.com/moustacheminer/git-discord">GitHub </a> for more info</p>
 		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="git.js"></script>
 	</body>
 </html>
