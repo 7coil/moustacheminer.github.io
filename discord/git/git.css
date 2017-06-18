@@ -1,0 +1,79 @@
+* {
+	cursor: sw-resize;
+	font-family: "Comic Sans MS", serif;
+	color: #FF0000;
+}
+
+body {
+	background-image: url("http://i.imgur.com/9hW5FgN.gif");
+	background-size: 100px 50px;
+}
+
+h1 {
+	background-color: #AAAAFF;
+	color: #FFAA55;
+}
+
+h2 {
+	background-color: #AA12FF;
+	color: #1FA7C5;
+	font-size: 40px;
+}
+
+h3 {
+	background-image: url("https://wallpaperscraft.com/image/minecraft_trees_houses_mountains_water_21189_2048x1152.jpg");
+	background-size: 300px 69px;
+	color: #FFFF00;
+	font-size: 30px;
+}
+
+h4 {
+	background-image: url("https://wallpaperscraft.com/image/minecraft_trees_houses_mountains_water_21189_2048x1152.jpg");
+	background-size: 100px 69px;
+	color: #A323F4;
+	font-size: 20px;
+}
+
+.cover {
+	position: fixed;
+	padding: 0px;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+@keyframes marquee-h {
+	0% { transform: translate(100%, 0); }
+	100% { transform: translate(-100%, 0); }
+}
+
+@keyframes marquee-v {
+	0% { transform: translate(0, -200%); }
+	100% { transform: translate(0, 200%); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes colour {
+	0% { filter: hue-rotate(0deg); }
+	25% { filter: hue-rotate(90deg); }
+	50% { filter: hue-rotate(180deg); }
+	75% { filter: hue-rotate(270deg); }
+	100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes bounce-x {
+	0% { left: 0%; }
+	100% { left: calc(100% - 160px); }
+}
+
+@keyframes bounce-y {
+	0% { top: 0%; }
+	100% { top: calc(100% - 90px); }
+}
