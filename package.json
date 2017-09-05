@@ -1,0 +1,24 @@
+{
+  "name": "moustacheminer.com",
+  "version": "1.0.0",
+  "description": "The homepage for moustacheminer.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moustacheminer/moustacheminer.github.io.git"
+  },
+  "author": "admin@moustacheminer.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moustacheminer/moustacheminer.github.io/issues"
+  },
+  "homepage": "https://github.com/moustacheminer/moustacheminer.github.io#readme",
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
