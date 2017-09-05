@@ -21,7 +21,7 @@ const messages = [
 	'Managed Security Services',
 	'Management Support System',
 	'Marske Site Services',
-	'Moustacheminer Services for Servers and Services Worldwide Comittee of the United Kingdom of Great Britain and Northern Ireland and Miscellaneous Overseas Territories',
+	'The Moustacheminer Server Services for Servers and Services International Worldwide Comittee and Association of Her Majesty the Queen Elizabeth the Second of the United Kingdom of Great Britain and Northern Ireland and Miscellaneous Overseas Territories',
 ];
 
 randomhtml.innerHTML = messages[Math.floor(Math.random() * messages.length)];
